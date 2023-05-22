@@ -20,7 +20,7 @@ jobs:
           export PATH=/opt/cross-pi-gcc-10.3.0-64/bin:${PATH}
           export CARGO_BUILD_TARGET=aarch64-unknown-linux-gnu
           export CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER=aarch64-linux-gnu-gcc
-          cargo install --features rustls tauri-cli
+          cargo install --features native-tls-vendored tauri-cli
       - uses: pguyot/arm-runner-action@v2.5.2
         with:
           base_image: https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Bullseye.7z
